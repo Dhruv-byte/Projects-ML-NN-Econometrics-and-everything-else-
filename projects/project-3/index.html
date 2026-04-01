@@ -3,43 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title</title>
+  <title>NLP: Parliament Speeches + Reddit Discourse</title>
   <link rel="stylesheet" href="../../assets/style.css" />
 </head>
 <body>
   <main class="container">
     <p><a href="../../index.html">← Back</a></p>
 
-    <h1>Project Title</h1>
-    <p><strong>TL;DR:</strong> One sentence on what you did and the best result.</p>
+    <h1>NLP: European Parliament Speeches + Labelled Reddit Discourse</h1>
+    <p><strong>TL;DR:</strong> Two NLP case studies on large unstructured text: mapping political discourse in European Parliament debates and analysing semantic structure in labelled Reddit mental-health discussions.</p>
 
-    <h2>Problem</h2>
-    <p>What you’re predicting/estimating and why it matters.</p>
-
-    <h2>Data</h2>
+    <h2>Projects</h2>
     <ul>
-      <li>Source:</li>
-      <li>Size / time period:</li>
-      <li>Target / key variables:</li>
+      <li><strong>European Parliament debates (106,598 speeches):</strong> TF-IDF vectorisation, UMAP/PCA visualisation, and LDA topic modelling to uncover themes and compare similarity across parties/roles.</li>
+      <li><strong>Labelled Reddit dataset (800 posts):</strong> TF-IDF + LSA (SVD) for semantic factors, DBSCAN clustering on reduced representations, and keyness analysis to test whether label categories separate cleanly.</li>
     </ul>
 
-    <h2>Approach</h2>
+    <h2>Key takeaway</h2>
+    <p>Political groups share administrative language but diverge on issue-specific topics; Reddit mental-health discourse appears more continuous than neatly separable clusters, suggesting labels can blur in practice.</p>
+
+    <h2>Output</h2>
     <ul>
-      <li>Baseline:</li>
-      <li>Final model:</li>
-      <li>Evaluation:</li>
+      <li><a href="./report.html">View report (HTML)</a></li>
     </ul>
 
-    <h2>Results</h2>
-    <p>Add a figure in <code>figures/</code> and reference it here.</p>
-
-    <h2>Code</h2>
-    <p>Link to your code folder: <a href="../../code/">/code</a> (you’ll add files next).</p>
-
-    <h2>Next steps</h2>
-    <ul>
-      <li>What you’d improve if you had more time.</li>
-    </ul>
+    <h2>Tools</h2>
+    <p>TF-IDF, LDA, UMAP/PCA, LSA/SVD, DBSCAN, keyness analysis.</p>
   </main>
 </body>
 </html>
