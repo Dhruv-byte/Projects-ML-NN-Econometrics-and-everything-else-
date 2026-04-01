@@ -3,43 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title</title>
+  <title>Phillips Curve OOS Forecasting</title>
   <link rel="stylesheet" href="../../assets/style.css" />
 </head>
 <body>
   <main class="container">
     <p><a href="../../index.html">← Back</a></p>
 
-    <h1>Project Title</h1>
-    <p><strong>TL;DR:</strong> One sentence on what you did and the best result.</p>
+    <h1>Phillips Curve OOS Forecasting (Post-Pandemic)</h1>
+    <p><strong>TL;DR:</strong> Tested whether Phillips Curve specifications could forecast US inflation out-of-sample after COVID, compared against simple benchmark models (train through 2019Q4; test 2020Q1–2023Q3).</p>
 
     <h2>Problem</h2>
-    <p>What you’re predicting/estimating and why it matters.</p>
+    <p>Post-pandemic inflation was persistently underpredicted by many standard models. This project evaluates whether a Phillips Curve relationship (inflation expectations + slack) retained forecasting power in the 2020–2023 period, and what additions improve performance.</p>
 
     <h2>Data</h2>
     <ul>
-      <li>Source:</li>
-      <li>Size / time period:</li>
-      <li>Target / key variables:</li>
+      <li>Quarterly US macro dataset (1968Q1–2023Q3).</li>
+      <li>Train/test split: train ends 2019Q4; test window 2020Q1–2023Q3.</li>
+      <li>Target: PCE inflation (headline; core used for robustness). Inputs include expectations proxies and slack measures, with optional cost-push proxies.</li>
     </ul>
 
     <h2>Approach</h2>
     <ul>
-      <li>Baseline:</li>
-      <li>Final model:</li>
-      <li>Evaluation:</li>
+      <li>Benchmarks: no-change / persistence baselines, AR(1), trailing mean.</li>
+      <li>Phillips Curve variants: expectations proxy sensitivity + alternative slack measures.</li>
+      <li>Extensions: add cost-push proxies (e.g., energy/import prices) to test whether omitted supply shocks explain the post-pandemic miss.</li>
+      <li>Evaluation: pseudo out-of-sample forecasting; RMSE/MAE/Bias over the test window.</li>
     </ul>
 
     <h2>Results</h2>
-    <p>Add a figure in <code>figures/</code> and reference it here.</p>
+    <p>Baseline Phillips Curve variants tend to underpredict the 2021–22 inflation surge relative to simple persistence benchmarks. Adding cost-push proxies improves performance for headline inflation in the COVID window.</p>
 
-    <h2>Code</h2>
-    <p>Link to your code folder: <a href="../../code/">/code</a> (you’ll add files next).</p>
-
-    <h2>Next steps</h2>
+    <h2>Outputs</h2>
     <ul>
-      <li>What you’d improve if you had more time.</li>
+      <li><a href="./notebook.html">View notebook (HTML)</a></li>
+      <li><a href="./paper/PC_Post_Pandemic.pdf">Read paper (PDF)</a></li>
     </ul>
+
+    <h2>Notes</h2>
+    <p>The notebook is shared as an HTML export for easy viewing. Underlying data and full runnable project structure may be omitted depending on licensing/coursework constraints.</p>
   </main>
 </body>
 </html>
