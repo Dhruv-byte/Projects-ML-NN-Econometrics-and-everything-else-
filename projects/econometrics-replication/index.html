@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Econometrics Replication: Energy Infrastructure & Bird Populations</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <main class="container">
+    <p><a href="../../index.html">← Back</a></p>
+
+    <h1>Econometrics Replication: Energy Infrastructure & Bird Populations</h1>
+    <p><strong>TL;DR:</strong> Replication + extension of Katovich (2024) estimating the causal impact of shale wells and wind turbines on US bird counts and biodiversity using panel data and difference-in-differences designs.</p>
+
+    <h2>Objective</h2>
+    <p>Assess whether the development of energy infrastructure—specifically shale oil/gas wells and wind turbines—leads to measurable changes in bird populations and species diversity across the United States.</p>
+
+    <h2>Data</h2>
+    <ul>
+      <li><strong>Source:</strong> Christmas Bird Count (CBC) longitudinal data.</li>
+      <li><strong>Scope:</strong> ~31k circle-year observations covering 2000–2020.</li>
+      <li><strong>Treatment:</strong> Infrastructure exposure defined within a 5km radius of survey circles (binary and continuous intensity variants).</li>
+      <li><strong>Outcomes:</strong> Bird counts and biodiversity metrics (including subgroup analyses such as grassland birds and longer-distance migrants).</li>
+    </ul>
+
+    <h2>Identification & Methods</h2>
+    <ul>
+      <li><strong>Difference-in-Differences (DiD):</strong> Circle and year fixed effects; both binary and continuous treatment specifications.</li>
+      <li><strong>Transformations:</strong> Inverse hyperbolic sine (IHS) transforms of count outcomes to handle skewness and interpret coefficients as semi-elasticities.</li>
+      <li><strong>Robustness:</strong> State-specific linear trends (state × year) to relax parallel trends and absorb unobserved state-level confounders.</li>
+      <li><strong>Extension / Mediation idea:</strong> Proposed IV/2SLS strategy using exogenous migration shocks (refugee resettlement patterns) to test whether population changes mediate ecological impacts.</li>
+    </ul>
+
+    <h2>Key Findings (high level)</h2>
+    <ul>
+      <li><strong>Shale infrastructure:</strong> Statistically significant negative impacts for some bird groups, with the sharpest declines for grassland birds and longer-distance migrants.</li>
+      <li><strong>Wind infrastructure:</strong> Effects are mostly statistically insignificant on total counts in aggregate, with some localized heterogeneity.</li>
+      <li><strong>Mediation:</strong> Population shifts do not appear to explain the main bird-count effects in the explored setup.</li>
+    </ul>
+
+    <h2>Deliverable</h2>
+    <ul>
+      <li><a href="./paper/Katovich_replication.pdf">Read the replication paper (PDF)</a></li>
+    </ul>
+
+    <h2>Notes</h2>
+    <p>This page focuses on the design and results summary. The full details (specifications, robustness checks, and discussion of assumptions) are in the PDF.</p>
+  </main>
+</body>
+</html>
