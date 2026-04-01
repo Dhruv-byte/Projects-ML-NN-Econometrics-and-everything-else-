@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deep MLP Optimization on FashionMNIST</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+  <main class="container">
+    <p><a href="../../index.html">← Back</a></p>
+
+    <h1>Deep MLP Optimization on FashionMNIST</h1>
+    <p><strong>TL;DR:</strong> Systematic tuning of a deep MLP for FashionMNIST, moving from an overfitting baseline to an improved, regularized model via learning-curve diagnostics and targeted hyperparameter sweeps.</p>
+
+    <h2>Objective</h2>
+    <p>Diagnose and reduce the generalization gap in deep MLPs for image classification, and identify which regularization techniques deliver the largest gains.</p>
+
+    <h2>Data</h2>
+    <ul>
+      <li>FashionMNIST benchmark (10-class image dataset).</li>
+      <li>Model selection via a fixed held-out validation split.</li>
+    </ul>
+
+    <h2>Method</h2>
+    <ul>
+      <li>Deep MLP classifier trained with cross-entropy loss.</li>
+      <li>Sequential tuning strategy guided by training and validation loss curves.</li>
+      <li>Regularization experiments: dropout, weight decay, batch normalization, label smoothing, and training-time augmentation.</li>
+      <li>Early stopping by selecting the best validation epoch for each configuration.</li>
+    </ul>
+
+    <h2>Key results</h2>
+    <ul>
+      <li>Learning curves indicate performance is primarily constrained by overfitting rather than model capacity.</li>
+      <li>Best observed validation accuracy: <strong>89.82%</strong> with dropout (p=0.2), weight decay (1e-4), and a tuned learning rate (3e-4).</li>
+      <li>Dropout provided the clearest generalization improvement; batch normalization was competitive but did not beat the dropout-focused configuration.</li>
+    </ul>
+
+    <h2>Outputs</h2>
+    <ul>
+      <li><a href="./report.html">View notebook (HTML)</a></li>
+      <li><a href="./paper/DeepMLP.pdf">Read paper (PDF)</a></li>
+    </ul>
+
+    <h2>Tools</h2>
+    <p>PyTorch, learning-curve diagnostics, hyperparameter sweeps, regularization ablations.</p>
+  </main>
+</body>
+</html>
